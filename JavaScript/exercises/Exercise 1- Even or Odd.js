@@ -1,3 +1,4 @@
+/*
 let numberodd = 5;
 let numbereven = 4;
 
@@ -12,3 +13,5 @@ function evenorodd (number) {
 
 evenorodd(numbereven)
 evenorodd(numberodd)
+
+*/
