@@ -1,0 +1,1 @@
+`Class average: ${getAverage(totalScores)} Your grade: ${getGrade(studentScore)}. You passed the course.`

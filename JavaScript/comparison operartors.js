@@ -1,7 +1,7 @@
 // String
 let String = "Hello World";
-let String2 = 'javascript';
-let String3 = String +"feliz";
+let String2 = "javascript";
+let String3 = String + "feliz";
 console.log(String);
 console.log(String2);
 console.log(String3);
@@ -36,18 +36,16 @@ const division = 10 / 20;
 const modulo = 10 % 3;
 const exponente = 10 ** 3;
 
-
 //3) Presicion
 const resultado = 0.1 + 0.2;
 console.log(resultado.toFixed(1));
-console.log(resultado === 0.3 );
+console.log(resultado === 0.3);
 
 // 4) Operaciones avanzadas
 const raiz = Math.sqrt(144);
 const valorAbsoluto = Math.abs(-10);
 const aleatorio = Math.random();
 console.log(raiz, valorAbsoluto, aleatorio);
-
 
 //parseInt and parseFloat
 const stringdecimal = "10.5";
@@ -71,15 +69,12 @@ OPERADORES DE COMPARACION
 
 */
 
-
 /*
  OPERADORES LOGICOS
     && AND
     || OR
     ! NOT
 */
-    
-
 
 /* 
 ESTRUCTURAS DE CONTROL
@@ -108,19 +103,14 @@ ESTRUCTURAS DE CONTROL
 // metodos
 console.log("--------------------------------------------------");
 console.log("Metodos");
-const numero =Math.floor(Math.random() * 10 + 1);
+const numero = Math.floor(Math.random() * 10 + 1);
 const numerodejugador = 5;
 if (numero === numerodejugador) {
-    console.log("Ganaste");
-} 
-else if (numero > numerodejugador) {
-    console.log("Casi");
+  console.log("Ganaste");
+} else if (numero > numerodejugador) {
+  console.log("Casi");
+} else if (numero < numerodejugador) {
+  console.log("Casi");
+} else {
+  console.log("Perdiste");
 }
-else if (numero < numerodejugador) {
-    console.log("Casi");
-}
-else {
-    console.log("Perdiste");
-}
-
-

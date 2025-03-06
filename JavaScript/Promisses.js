@@ -20,7 +20,7 @@ They have two methods
 const promise = new Promise((resolve, reject) => {
     setTimeout(() =>{
         let operationSeccesful = true;
-        if (operationSeccesful){
+        if (!operationSeccesful){
             resolve('Operation successfull')
         } else {
             reject('Operation failed')
@@ -32,8 +32,8 @@ promise
     .then((successMessage) => {
         console.log(successMessage)
     })
-    .catch((errorMessage) => {
-        console.log(errorMessage)
+    .catch((failedMessage) => {
+        console.log(failedMessage)
     })
 
 
@@ -68,3 +68,15 @@ async function fetchData (){
     }
 
 }
+
+console.log("__________________________ ")
+console.log("for await of")
+const urls = [
+    "https://jsonplaceholder.typicode.com/users",
+    "https://jsonplaceholder.typicode.com/posts",
+    "https://jsonplaceholder.typicode.com/albums"
+]
+
+
+
+
