@@ -114,7 +114,6 @@ console.log(countries)
 console.log("_________________________________________________________")
 console.log("=> push() method example")
 
-const fruits = ["apple", "banana", "orange"];
 console.log(fruits); // Output: ["apple", "banana", "orange"]
 
 // Using push() to add elements to the end of the array
