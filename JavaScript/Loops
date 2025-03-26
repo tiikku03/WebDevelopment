@@ -1,3 +1,4 @@
+console.log()
 /* loops
     1) For (variable; condicion; incremento){
         codigo a ejecutar
