@@ -12,50 +12,6 @@ Fulfill the user stories and pass all the tests below to complete this project. 
 Note: Be sure to add <link rel="stylesheet" href="styles.css"> in your HTML to link your stylesheet and apply your CSS
 
 
-1. You should have an h1 element with an id of title.
-2. Your #title should not be empty.
-Waiting:3. You should have a p element with an id of description.
-Waiting:4. Your #description should not be empty.
-Waiting:5. You should have a form element with an id of survey-form.
-Waiting:6. You should have an input element with an id of name.
-Waiting:7. Your #name should have a type of text.
-Waiting:8. Your #name should require input.
-Waiting:9. Your #name should be a descendant of #survey-form.
-Waiting:10. You should have an input element with an id of email.
-Waiting:11. Your #email should have a type of email.
-Waiting:12. Your #email should require input.
-Waiting:13. Your #email should be a descendant of #survey-form.
-Waiting:14. You should have an input element with an id of number.
-Waiting:15. Your #number should be a descendant of #survey-form.
-Waiting:16. Your #number should have a type of number.
-Waiting:17. Your #number should have a min attribute with a numeric value.
-Waiting:18. Your #number should have a max attribute with a numeric value.
-Waiting:19. You should have a label element with an id of name-label.
-Waiting:20. You should have a label element with an id of email-label.
-Waiting:21. You should have a label element with an id of number-label.
-Waiting:22. Your #name-label should contain text that describes the input.
-Waiting:23. Your #email-label should contain text that describes the input.
-Waiting:24. Your #number-label should contain text that describes the input.
-Waiting:25. Your #name-label should be a descendant of #survey-form.
-Waiting:26. Your #email-label should be a descendant of #survey-form.
-Waiting:27. Your #number-label should be a descendant of #survey-form.
-Waiting:28. Your #name should have a placeholder attribute and value.
-Waiting:29. Your #email should have a placeholder attribute and value.
-Waiting:30. Your #number should have a placeholder attribute and value.
-Waiting:31. You should have a select field with an id of dropdown.
-Waiting:32. Your #dropdown should have at least two selectable (not disabled) option elements.
-Waiting:33. Your #dropdown should be a descendant of #survey-form.
-Waiting:34. You should have at least two input elements with a type of radio (radio buttons).
-Waiting:35. You should have at least two radio buttons that are descendants of #survey-form.
-Waiting:36. All your radio buttons should have a value attribute and value.
-Waiting:37. All your radio buttons should have a name attribute and value.
-Waiting:38. Every radio button group should have at least 2 radio buttons.
-Waiting:39. You should have at least two input elements with a type of checkbox (checkboxes) that are descendants of #survey-form.
-Waiting:40. All your checkboxes inside #survey-form should have a value attribute and value.
-Waiting:41. You should have at least one textarea element that is a descendant of #survey-form.
-Waiting:42. You should have an input or button element with an id of submit.
-Waiting:43. Your #submit should have a type of submit.
-Waiting:44. Your #submit should be a descendant of #survey-form
 -->
 
 <!DOCTYPE html>
@@ -73,29 +29,41 @@ Waiting:44. Your #submit should be a descendant of #survey-form
             <fieldset id="personal-information">
                 <label 
                     for="name" 
-                    name="name">Name</label>
-                <input 
-                    type="text" 
-                    id="name" 
-                    placeholder="Enter your name"
-                    required>
+                    id="name-label">Name
+                    <input 
+                        type="text" 
+                        id="name" 
+                        placeholder="Enter your name"
+                        required>
+                </label>
                 <label 
                     for="age"
-                    name="age">Age</label>
-                <label for="email"></label>
-                <input 
-                    type="number" 
-                    id="age"
-                    min="13"
-                    max="100"
-                    placeholder="what is your age"
-                    required>
+                    id="number-label">Age
+                    <input 
+                        type="number" 
+                        id="number"
+                        min="13"
+                        max="100"
+                        placeholder="what is your age"
+                        required>
+                </label>
                 <label 
                     for="adress" 
-                    name="address">Phisical adress (Opcional)</label>
-                <input 
-                    type="text" 
-                    placeholder="what is your address">
+                    name="address">Phisical address (Opcional)
+                    <input 
+                        type="text" 
+                        placeholder="what is your address">
+                </label>
+                <label 
+                    for="email"
+                    id="email-label">Email
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="email" 
+                        placeholder="enter your email"
+                        required>
+                </label>
             </fieldset>
 
             <fieldset id="your-interests">
@@ -110,41 +78,56 @@ Waiting:44. Your #submit should be a descendant of #survey-form
                     <label 
                         for="radio" 
                         name="radio-label">What is the best time to contact you?</label>
+                        <label for="morning" >
                         <input 
                             type="radio" 
                             id="morning" 
                             value="morning" 
-                            name="morning" 
-                            checked>morning
+                            name="radio-label"
+                            class="inline" 
+                            checked>morning</label>
+                        <label for="midday">
                         <input 
                             type="radio" 
                             id="midday" 
                             value="midday" 
-                            name="radio">midday
+                            name="radio-label"
+                            class="inline">midday</label>
+                        <label for="evening">
                         <input 
                             type="radio" 
                             id="evening" 
                             value="evening" 
-                            name="evening">evening
+                            name="radio-label"
+                            class="inline">evening</label>
+                        <label for="night">
                         <input 
                             type="radio" 
                             id="night" 
                             value="night" 
-                            name="night">night  
+                            name="radio-label"
+                            class="inline">night </label>
                 </div>
             </fieldset>
             <fieldset class="schedule">
-                <label for="checkbox" name="checkbox-label">Checkbox
-                    <input type="checkbox" id="checkbox" value="weeekendsoff">Weekendsoff
-                    <input type="checkbox" id="checkbox" value="mondayoff">Mondayoff
-                    <input type="checkbox" id="checkbox" value="tuesdayoff">Tuesdayoff
-                    <input type="checkbox" id="checkbox" value="tudayoff">Tudayoff
+                <label for="checkbox" name="checkbox">wich days would you like to have off?
+                    <div>
+                        <input type="checkbox" id="checkbox" name="1" class="inline" value="weeekendsoff">Weekendsoff
+                    </div>
+                    <div>
+                        <input type="checkbox" id="checkbox"  name="1" class="inline" value="mondayoff">Mondayoff
+                    </div>
+                    <div>
+                        <input type="checkbox" id="checkbox"  class="inline" value="tuesdayoff">Tuesdayoff
+                    </div>
+                    <div>
+                        <input type="checkbox" id="checkbox" class="inline" value="tudayoff">Tudayoff
+                    </div>   
                 </label>
                 <textarea id="textarea" cols="40" rows="3" placeholder="Enter your comments"></textarea>
-                <input type="button" id="submit" value="Submit">
+                <input type="submit" id="submit" value="Submit">
             </fieldset>
         </form>
-        
     </body>
 </html>
 

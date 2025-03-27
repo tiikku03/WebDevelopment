@@ -1,14 +1,14 @@
 body{
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
 }
-h1,p{
-    margin: auto;
+h1, p {
+    margin: 1em auto;
 }
 label, input{
     display: block;
 }
-
-input[id=""]
+.inline{
+    width: unset;
+    display: inline;
+}
