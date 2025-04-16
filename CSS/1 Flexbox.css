@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+    font-family: sans-serif;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    background-color: white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    align-items: flex-end;
+    align-content: space-between;
+}
+li:nth-child(2){
+
+}
