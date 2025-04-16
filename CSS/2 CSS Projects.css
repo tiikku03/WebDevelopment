@@ -1,0 +1,112 @@
+
+/* Button */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-family: 'Karla', sans-serif;
+    --body-bg: #1E1F25;
+    --btn-bg: #000;
+    --btn-color: #cbcbcb;
+    --btn-color-hover: #fff;
+    --grad-color1: #eeaf61;
+    --grad-color2: #fb9062;
+    --grad-color3: #ee5d6c;
+    --grad-color4: #ce4993;
+    --grad-color5: #6a0d83;
+}
+
+body{
+    background-color:var(--body-bg);
+    font-family: var(--font-family);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 991px;
+}
+
+.button-border{
+    padding: 2px;
+    background: linear-gradient(115deg,var(--grad-color1),var(--grad-color2),var(--grad-color3),var(--grad-color4),var(--grad-color5));
+}
+
+button{
+    background: var(--btn-bg);
+    color: var(--btn-color);
+    border: none;
+    font-family: inherit;
+    letter-spacing: 0.1em;
+    padding: 1em 1.5em;
+}
+
+.button-border:hover{
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-content: center;
+    padding: 2px;
+    background: linear-gradient(115deg,var(--grad-color5),var(--grad-color4),var(--grad-color3),var(--grad-color2),var(--grad-color1));
+}
+
+.button-border:hover button{
+    color: var(--btn-color-hover);
+    padding: 1.1em 1.6em;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*  Expanding Serch Var */
+
+:root {
+    --search-border: #bbb;
+    --search-focus-border: #3a71ca;
+}
+
+.hide {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.containerSearchVar {
+    background: white;
+    height: 991px;
+    padding: 50PX;
+    width: 80%;
+    min-width: 320px;
+}
+
+.search-bar {
+    width: 30%;
+    line-height: 2;
+    border-radius: 4px;
+    border: 1px solid var(--search-border);
+    transition: all .3s;
+}
+
+.search-bar:focus {
+    outline: none;
+    width: 100%;
+    border-color: var(--search-focus-border);
+    border-width: 2px;
+}
+
+.search-bar::placeholder {
+    font-weight: 200;
+}
+
+.search-bar:focus::placeholder {
+    color: transparent
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
