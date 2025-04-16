@@ -90,6 +90,8 @@ async function fetchNewData() {
     console.log(error);
   }
 }
+
+ 
 async function name(params) {
     try {
         let response = await fetch("https://rickandmortyapi.com/api/character");
@@ -99,3 +101,4 @@ async function name(params) {
         console.log(error)
     }
 }
+
