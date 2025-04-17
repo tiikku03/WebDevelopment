@@ -41,8 +41,17 @@ promise
     console.log(failedMessage);
   });
 
+
+
+
+
+
+  
+
+
+
 console.log("__________________________ ");
-console.log <"ASYNC  and AWAIT";
+console.log <"ASYNC and AWAIT";
 
 
 function fetchData (){
