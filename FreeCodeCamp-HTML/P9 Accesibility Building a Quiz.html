@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="quiz" />
+    <link rel="stylesheet" href="P9 Accesibility Building a Quiz.css" />
+    <title>Quiz for everibody</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+        id="logo"
+        alt="freeCodeCamp"
+      />
+      <h1>HTML/CSS Quiz</h1>
+      <nav>
+        <ul>
+          <li><a href="#student-info">INFO</a></li>
+          <li><a href="#html-questions">HTML</a></li>
+          <li><a href="#css-questions">CSS</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- AMKING WEBSITES THA EVERY ONE CAN INTERACT WITH, EASIER TO USE FOR PEOPLE WITH DISABILITIES 
+         (POOR) Perceivable, Operable (able to interact with the interface), Understandable (simple languaje), Robust(semantic html)-->
+      <form
+        method="post"
+        action="https://freecodecamp.org/practice-project/accessibility-quiz"
+      >
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student Info</h2>
+          <div class="info">
+            <label for="fullName">What is your name</label>
+            <input
+              type="text"
+              name="fullName"
+              id="fullName"
+              placeholder="Juan Carlos"
+            />
+          </div>
+          <div class="info">
+            <label for="email">What is your email adress</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="info">
+            <label for="dob">What is your date of birth</label>
+            <input type="date" name="dob" id="dob" />
+          </div>
+        </section>
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">HTML</h2>
+          <div class="question-block">
+            <h3><span class="sr-only">Question </span>1</h3>
+            <fieldset class="questions" name="html-question-one"></fieldset>
+          </div>
+          <div class="question-block">
+            <h3><span class="sr-only">Question </span>2</h3>
+            <fieldset class="questions" name="question">
+              <legend>true/false question 1</legend>
+              <ul class="answers-list">
+                <!--PARA QUE LOS RADIO-OPTIONS ESTEN ENLASADAS DEBEN DE TENER EL MISMO NAME ATTRIBURE-->
+                <li>
+                  <label for="q1-a1"
+                    >True
+                    <input type="radio" name="q1" id="q1-a1" value="true" />
+                  </label>
+                </li>
+                <li>
+                  <label for="q1-a2"
+                    >False
+                    <input type="radio" name="q1" id="q1-a2" value="false" />
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="question-block">
+            <fieldset class="questions" name="html-question-two">
+              <legend>true/false question 2</legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q2-a1"
+                    >True
+                    <input type="radio" name="q2" id="q2-a1" value="true" />
+                  </label>
+                </li>
+                <li>
+                  <label for="q2-a2"
+                    >False
+                    <input type="radio" name="q2" id="q2-a2" value="false" />
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">css</h2>
+          <div class="formrow">
+            <div class="question-block">
+              <label for="question1"
+                >Can the CSS margin property accept negative values?</label
+              >
+            </div>
+            <div class="answer">
+              <select name="question1" id="question1" required>
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="question-block">
+              <!--PARA ENLAZAR EL TEXBOX Y EL LABEL DEBEN DE TERNER EL MISMO (ID)-->
+              <label for="question2"> Do you have any questions: </label>
+            </div>
+            <div class="answer">
+              <textarea
+                name="question2"
+                id="question2"
+                rows="10"
+                cols="40"
+              ></textarea>
+            </div>
+          </div>
+        </section>
+        <button type="submit">Send</button>
+      </form>
+    </main>
+    <footer>
+      <address>
+        <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+        San Francisco<br />
+        California<br />
+        USA
+      </address>
+    </footer>
+  </body>
+</html>
