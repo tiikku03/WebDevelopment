@@ -1,0 +1,80 @@
+body{
+    font-size: 22px;
+}
+
+/* To select a (Tag)*/
+p {
+    color: purple;
+}
+
+
+/* To select a (Class) we use a (.)*/
+.gray{
+
+}
+
+/* To select an (id) we use a #, the recomendation is to use clases insted of id´s*/
+#second {
+
+}
+
+
+
+h1, h2{ /*To select more than one tag we use a comma (,)*/
+    color: purple;
+}
+
+
+p span{ /* To select an element that is inside an another elemnt*/
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+
+
+*{ /* The Global selector (*)*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/* CSS works like a cascade the last property read is the one that will be render */
+
+        p {
+            color: green;
+        }
+
+        p {
+            color: yellow;
+        }
+
+        p {
+            color: purple;
+        }/* The paragraph will be purple as it is the last property*/
+
+
+
+
+/*The selectors that are more specific will overwrite the one that are not*/
+
+/*a table with a class that is name "firstElement"*/
+        .firstElement{
+            background-color: blue;
+        }/* Will overwrite a Tag like (table)*/
+        table{
+            background-color: red;
+        }/*The web will render the table as blue due to the herarqui*/
+
+/* To look at the specificity copy the next link
+            https://specificity.keegan.st/
+*/
+
+
+
+/*
+The Specificity works in cascade from the most important to the least important 
+        1) IDs 
+        2) Classes, attributes and pseudo-classes
+        3) Elements and pseudo-elements
+*/
