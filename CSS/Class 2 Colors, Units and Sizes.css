@@ -1,0 +1,46 @@
+/*RGB (red green blue)*/
+body{
+    color: rgb(0, 0, 0);
+    color: rgb(255, 0, 0);
+    color: rgb(0, 255, 0);
+    color: rgb(0, 0, 255);
+    color: rgb(255, 255, 255);
+    color: rgba(red, green, blue, 0.5);/*Alpha chanel: the forth space is for the transparency from 0 to 1*/
+}
+
+
+/*Hexodecimal works the same as the rgb*/
+p{
+    color: #000000 #000; /*f stands for full*/
+    color: #ff0000 #f00;
+    color: #00ff00 #0f0;
+    color: #0000ff #00f;
+    color: #ffffff #fff;
+}
+
+
+/*hsl: hue, saturation lightness*/
+a{
+    color: hsl(hue/*from 0(red) to 360(red)*/, saturation, lightness);
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*                            CSS Units                             */
+
+html{
+    border: 2px solid #0f0;/*absolute values are for borders*/
+    font-size: 16px; 
+}
+h1{
+    font-size: 1rem;/* Font size of the Root Element:  */
+    font-size: 1em;/*Emplified*/
+    padding: 0.5em;/*paddings and margins*/ 
+    padding: 1vw;
+    padding: 1vh;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+ 
