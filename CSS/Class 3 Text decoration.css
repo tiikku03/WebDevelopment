@@ -64,3 +64,8 @@ ul{
 
 /*pseudo clases (:) and pseudo elements (::)*/
  
+
+/*------------------DISPLAY--------------*/
+.display p{
+    background: lightgray;   
+}
