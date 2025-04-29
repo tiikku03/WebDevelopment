@@ -1,0 +1,66 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+h2{
+    text-align: center;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.typography .first{
+    text-transform: capitalize;
+    text-align: center;
+    text-indent: 2em; /* the distance from the begeening of the paragraph*/
+    line-height: 1.2;
+    letter-spacing: 1em;
+}
+
+.typography .second{
+    font-weight: 700;
+    font-family: "Caveat", cursive;
+}
+
+.typography .third{
+    text-decoration: line-through;
+    text-transform: uppercase;
+}
+
+
+/*------------------LINKS--------------*/
+
+/*in the next order has to be organized*/
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: blue;
+}
+
+a:visited{
+    color: purple;
+}
+a:hover, a:focus{
+    color: dodgerblue;
+}
+a:active{
+    color: red;
+}
+
+
+/*------------------LISTS--------------*/
+ol{
+    list-style: decimal;
+    
+}
+ul{
+    list-style-type: square;
+    text-align: center;
+    list-style-position: inside;
+    color: #00f;
+    line-height: 1.6;
+    list-style-image: none; /*used to set an image as the list style type*/
+}
+
+/*pseudo clases (:) and pseudo elements (::)*/
+ 
