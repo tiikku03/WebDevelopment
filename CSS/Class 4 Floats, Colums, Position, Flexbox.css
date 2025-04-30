@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.block{
+    width: 30vw;
+    height: 30vw;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.left{
+    float: left;
+    margin-right: 1rem;
+}
+
+p{
+    margin-left: 10px;
+}
+
+.right {
+    float: right;
+    margin-left: 1rem;
+}
+
+.containerBlock{
+    background-color: antiquewhite;
+    border: 2px solid black;
+    padding: 1rem;
+    display: flow-root;
+}
+
+.colums{
+    column-count: 4;
+    column-width: 250px;
+    column-rule: 3px solid #333;
+}
+
+.colums h2{
+    background-color: black;
+    break-inside: avoid;
+    color: aliceblue;
+}
+.Position h2{
+    margin-top: 100px;
+}
+
+.containerOne{
+    margin: 0 auto;
+    width: 80vw;
+    height: 120vw;
+    border: 3px dashed black;
+    position: relative;
+    margin-bottom: 600px;
+}
+
+.containerTwo{
+    margin: 200px auto;
+    width: 40vw;
+    height: 60vw;
+    border: 3px solid blue;
+}
+
+.containerbox{
+    width: 100px;
+    height: 100px;
+    padding: 1rem;
+
+}
+
+.absolute{
+    background-color: yellow;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.relative{
+    position: relative;
+    background-color: red;
+}
+
+
+.fixed{
+    background-color: green;
+    position: fixed;
+    top: 100px;
+    right: 0;
+}
+
+.sticky{
+    background-color: purple;
+    position: sticky;
+    top: 0;
+}
