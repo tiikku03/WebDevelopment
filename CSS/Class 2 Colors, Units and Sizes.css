@@ -40,10 +40,8 @@ html{
             (em, rem, %)
         -->Relative to the viewport
 */
-=======
 
 
->>>>>>> 92b50552006a11d0fab2da0404a091d35f4172b9
 h1{
     font-size: 1rem;/* Fthis unint is always telative to the Root of the document  */
     font-size: 1em;/*it is inherit from  the font size of the parent, if the parent has a font size of 10px, 1em i equal to 10px*/
