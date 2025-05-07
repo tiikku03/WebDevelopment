@@ -27,12 +27,18 @@ a{
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*                            CSS Units                             */
-
+/* 
+/**/                           CSS Units                             */
+/* Absolute Units*/
 html{
     border: 2px solid #0f0;/*absolute values are for borders*/
     font-size: 16px; 
 }
+/* Relative Units 
+        -->Relative to the font size
+            (em, rem, %)
+        -->Relative to the viewport
+*/
 h1{
     font-size: 1rem;/* Font size of the Root Element:  */
     font-size: 1em;/*Emplified*/
