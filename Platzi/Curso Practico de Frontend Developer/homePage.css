@@ -66,16 +66,16 @@ body {
   }
 }
 
-.product-info div p:nth-child(1){
-    font-weight: bold;
-    font-size: var(--md);
-    margin-top: 0;
-    margin-bottom: 4px;
+.product-info div p:nth-child(1) {
+  font-weight: bold;
+  font-size: var(--md);
+  margin-top: 0;
+  margin-bottom: 4px;
 }
 
-.product-info div p:nth-child(2){
-    color: var(--very-ligh-pink);
-    font-size: var(--sm);
-    margin-top: 0;
-    margin-bottom: 0;
+.product-info div p:nth-child(2) {
+  color: var(--very-ligh-pink);
+  font-size: var(--sm);
+  margin-top: 0;
+  margin-bottom: 0;
 }
