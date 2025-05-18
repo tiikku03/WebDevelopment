@@ -100,14 +100,14 @@ input {
 }
 
 .info label {
-  width: 10%;
+  width: 100%;
   min-width: 55px;
 }
 
 .info label,
 .info input {
-  display: inline-block;
-  text-align: right;
+  display: block;
+  text-align: left;
 }
 
 .question-block {
