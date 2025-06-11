@@ -52,12 +52,13 @@ console.log(`The string being joint: ${usingTheJoin}`)
 
 console.log("------->.splice()-----------------------")
 /* array.splice(startIndex, itemsToRemove, item1, item2) */
+let arrayExample = [4, 5]
 let arrSplice = [1, 2, 3, 4, 5];
-arrSplice.splice(2, 0, 6, 7);
+arrSplice.splice(2, 0, ...arrayExample);
 console.log(arrSplice);
 
 
-console.log("------->.splice()-----------------------")
+console.log("------->.includes()-----------------------")
 /* array.includes(itemToBeSearched, StartingIndex) */
 let arrIncludes = [1, 2, 3, 4, 5];
 console.log(arrIncludes.includes(3, 3));

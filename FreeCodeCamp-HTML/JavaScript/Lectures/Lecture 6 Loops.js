@@ -81,11 +81,14 @@ do {
     contador++;
 } while (contador <= 10);
 
-console.log("--------------------------------------------------");
-console.log("Funciones");
-/*
-    1) Declarativas
 
-    2) Expresivas
-    
-*/
+// break : To exit the loop immediately.
+// continue it is used to skip the code in an iteration
+
+console.log("-------------------------------------------------------")
+for (let i = 2; i <= 13; i++) {
+  console.log(i);
+}
+
+
+
