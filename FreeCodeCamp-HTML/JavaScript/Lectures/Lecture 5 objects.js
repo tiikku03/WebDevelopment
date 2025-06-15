@@ -213,3 +213,19 @@ function getAverageRating (array){
   let averageRating = totalIngredients/(array.length)
   return averageRating
 }
+
+
+
+///////////////////////////////Creating a factory function ////////////////////////////
+/* Create objects */
+
+function personFactory (name){
+    return {
+        talkk(){
+            return `Hello I am ${name}`
+        }
+    }
+}
+
+/////////////////////////////////Constructor Functions /////////////////////////////////////
+/* A function that creates objects */
