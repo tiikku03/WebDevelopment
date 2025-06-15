@@ -17,7 +17,7 @@
                                                                   │
 ┌─────────┴─────────────────┐                                     |     ├─── Modificar Atributos
 │ 2. Selección de Elementos │                                     │     ├─── `setAttribute()`
-└─────────┬─────────────────┘                                     |     │     ├─── `getAttribute()`
+└─────────┬─────────────────┘                                     |     ├─── `getAttribute()`
           │                                                       │     ├─── `removeAttribute()`
           ├─── Por ID: `document.getElementById()`                │     ├─── Propiedades directas (ej. `img.src`, `a.href`)
           ├─── Por Clase: `document.getElementsByClassName()`     │
