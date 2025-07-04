@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin: 0;
+        }
+
+        #task-manager {
+            background: #fff;
+            padding: 20px;
+            margin: auto;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #task-form {
+            margin-bottom: 20px;
+        }
+
+        #task-input {
+            padding: 10px;
+            width: 70%;
+            margin-right: 10px;
+        }
+
+        #task-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #task-list li {
+            background: #eee;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        /* Dark theme styles */
+        body.dark-theme {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .dark-theme #task-manager {
+            background: #222;
+            color: #fff;
+        }
+
+        .dark-theme #task-list li {
+            background: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="theme-toggle">
+        <button id="toggle-theme-btn">Toggle Theme</button>
+    </div>
+    <div id="task-manager">
+        <h1>Task Manager</h1>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Enter a new task" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <ul id="task-list">
+        </ul>
+    </div>
+    <script src="taskManager.js"></script>
+</body>
+
+</html>
