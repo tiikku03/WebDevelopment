@@ -1,4 +1,4 @@
-Ways to make money: identify one problem that i am interested in, learn the technologies needed to land in that project
+# Ways to make money: identify one problem that i am interested in, learn the technologies needed to land in that project
     -specialist; developing expertise and high value specialties that companies really need
         -security
         -AI integration 
@@ -14,7 +14,7 @@ Ways to make money: identify one problem that i am interested in, learn the tech
      identifying problems worth solving; work with a repository having all the reusable code there
 
 
-Things important to learn:
+# Things important to learn:
     -Every Application needs; learn how to build modular reusable components that solve those problems
         -Onboarding and Authentication
         -Profile Management 
@@ -28,7 +28,7 @@ Things important to learn:
     developer valuable 
 
 
-Getting Ahead of other developers: 
+# Getting Ahead of other developers: 
     -Choose a problem you care about solving, something unique.
     learning concepts while building the project, figuring things out by my own
         1) Architectural thinking; the ability to design systems and not just code them, making decisions about data structures, API design and components relationship.
@@ -41,12 +41,13 @@ Getting Ahead of other developers:
     -Document My process, challenges and my solutions on the different platforms like github
     
 
-Break into tech in 6 months or less:
+# Break into tech in 6 months or less:
     -Build a project that Showcases problem solving and not coding abilities. Solve actual business projects
     -weeks 1-2; Choose one problem solving project, Building it as a portfolio
     -Week 3-16; Building while learning, implement active recall instead of passive re-recall (mapping the user experience and data flow)(intuitive user flow for a feature)(how to
     optimize performance)
     -Week 8-20; find a mentor for guidance
+    
     -Mastering the hiring process   
         -Most companies use an applicant tracking system (ATS) to filter the resumes before a human sees them, add relevant keyWords in white text related to the job posting
         -find the hiring managers email directly, send them a personalized message like
