@@ -85,3 +85,115 @@ setTimeout(saludo, timeout = 3000,"oscar"); // Hola, soy un callback
 
 */
 
+/* 
+
+
+Convert callbacks to promises
+
+how to create  promises: a promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+   
+ ----Promise Maker -----------
+function createPromise (){
+    return new Promise( function(resolve, reject) {
+        // Do something asynchronous
+    }
+
+Promise Reciver
+
+let variable = createPromise();
+
+
+how to use promises
+
+
+
+
+why
+
+different phases of promises
+
+then, catch, finally
+
+Error handling 
+
+Chain multiple promises togther
+
+
+
+*/
+
+
+
+
+/*
+
+
+The problem with Async is that you may not know when the code is executed, for example while calling an API we need to wait for the response before executing the next line of code.
+but we don't know how long it is going to take, so we use callbacks to handle this situation.
+
+
+
+
+
+
+*/
+
+
+function getWeather() {
+  return new Promise(function(resolve, reject) {
+    setTimeout(() => {
+      resolve('Sunny')
+    }, 100)
+  })
+}
+
+function getWeatherIcon(weather) {
+
+}
+
+function onSuccess(data) {
+  console.log(`Success ${data}`)
+}
+
+function onError(error) {
+  console.log(`Error: ${error}`)
+}
+
+getWeather().then(onSuccess, onError)
+
+
+///////////////////////////////////////////////////////////////////////////////////
+function fun1() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject('404')
+    }, 1000)
+  })
+}
+
+function fun2() {
+    console.log('fun2 is called')
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('🤩') 
+    }, 100)
+  })
+}
+
+function onSuccess(data) {
+  console.log(data)
+}
+
+function onError(errorCode) {
+  console.log(`ERROR: ${errorCode}`)
+}
+
+function onFinally() { 
+  console.log('FINALLY WE BE DONE YO')
+}
+
+fun1()
+  .then(fun2) // this is executed if the promise is resolved successfully
+  .then(onSuccess)// this is executed if the promise is resolved successfully
+  .catch(onError) // this is executed if there is an error in the promise chain
+  .finally(onFinally) // this is an optional function, it will always be executed
