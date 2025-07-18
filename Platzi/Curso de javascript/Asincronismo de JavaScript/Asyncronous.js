@@ -83,9 +83,6 @@ setTimeout(saludo, timeout = 3000,"oscar"); // Hola, soy un callback
 2) acceder a un producto en particular.
 
 
-*/
-
-/* 
 
 
 Convert callbacks to promises
@@ -103,10 +100,10 @@ Promise Reciver
 let variable = createPromise();
 
 
+
+
+
 how to use promises
-
-
-
 
 why
 
@@ -119,19 +116,8 @@ Error handling
 Chain multiple promises togther
 
 
-
-*/
-
-
-
-
-/*
-
-
 The problem with Async is that you may not know when the code is executed, for example while calling an API we need to wait for the response before executing the next line of code.
 but we don't know how long it is going to take, so we use callbacks to handle this situation.
-
-
 
 
 

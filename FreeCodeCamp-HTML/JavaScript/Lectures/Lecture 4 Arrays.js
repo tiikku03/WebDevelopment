@@ -60,6 +60,7 @@ console.log(arrSplice);
 
 console.log("------->.includes()-----------------------")
 /* array.includes(itemToBeSearched, StartingIndex) */
+//splice(start, deleteCount, item2, /* …, */ itemN)
 let arrIncludes = [1, 2, 3, 4, 5];
 console.log(arrIncludes.includes(3, 3));
 

@@ -1,0 +1,58 @@
+/*
+
+Transform: hacer que los elementos modifiquen sus propiedades iniciales.
+
+Transition: desde un estado A a un estado B
+
+Animation: desde un estado A a un estado B, pero con más control sobre la transicion
+
+tricked animation: animación que se activa por un evento, como hover, focus, scroll.
+    pseudo-clases: :hover, 
+        =>:focus, 
+        =>:active, 
+        =>:checked, 
+        =>:disabled, 
+        =>:valid, 
+        =>:invalid, 
+        =>:first-child, 
+        =>:last-child, 
+        =>:nth-child(), 
+        =>:not().
+
+*/
+
+
+
+a:link {
+    color: pink;
+    text-decoration: none;
+    font-size: 5rem;
+}
+
+
+a:visited {
+    color: skyblue;
+    text-decoration: none;
+    font-size: 5rem;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+    font-size: 5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+
+p:not(:first-child) {
+    color: green;
+    font-size: 2rem;
+    transition: all 0.5s ease-in-out;
+}
+
+div::before{
+    content: "Hola";
+    color: blue;
+    font-size: 2rem;
+    transition: all 0.5s ease-in-out;
+}

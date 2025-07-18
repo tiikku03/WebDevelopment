@@ -1,3 +1,14 @@
+function Constructor(){
+  this.data = {}
+  this.lenght = 0
+  this.get = (index)=> this.data[index]
+  this.addElement = (itm) => {
+    this.data[this.lenght] = itm;
+    this.lenght++
+  }
+}
+
+
 class MyArray {
   constructor() {
     // construimios cada elemento del array como un objecto
@@ -72,6 +83,7 @@ class MyArray {
 
 
 let myArray = new MyArray();
+console.log(typeof(myArray))
 
 
 myArray.unshift("Suerte")
@@ -79,6 +91,7 @@ myArray.unshift("Con el")
 myArray.unshift("desafio")
 myArray.unshift("platzinauta")
 myArray.unshift("Un 🐱 random en el desafío")
+console.log(myArray)
 
 console.log(myArray.shift())
 
@@ -107,3 +120,4 @@ myArray.shift()
 
 
 console.log(myArray.data)
+console.log(myArray)
