@@ -1,0 +1,1 @@
+console.log(newList.insert(3, 2));

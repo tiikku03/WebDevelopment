@@ -85,7 +85,7 @@ class HashTable {
 
 
 const myHashTable = new HashTable(10);
-
+debugger
 myHashTable.set("daniel", 2004);
 myHashTable.set("samuel", 2000);
 myHashTable.set("claudia", 1979);
