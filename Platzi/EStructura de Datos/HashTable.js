@@ -79,19 +79,133 @@ class HashTable {
     }
     return undefined;
   }
+
+  // Obtener todas las claves
+  keys() {
+    const keys = [];
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i]) {
+        for (let j = 0; j < this.data[i].length; j++) {
+          keys.push(this.data[i][j][0]);
+        }
+      }
+    }
+    return keys;
+  }
+
+  // Obtener todos los valores
+  values() {
+    const values = [];
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i]) {
+        for (let j = 0; j < this.data[i].length; j++) {
+          values.push(this.data[i][j][1]);
+        }
+      }
+    }
+    return values;
+  }
+
+  // Obtener el factor de carga (qué tan llena está la tabla)
+  loadFactor() {
+    let usedBuckets = 0;
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i] && this.data[i].length > 0) {
+        usedBuckets++;
+      }
+    }
+    return usedBuckets / this.data.length;
+  }
+
+  // Mostrar estadísticas de la tabla
+  getStats() {
+    let totalElements = 0;
+    let collisions = 0;
+    let emptyBuckets = 0;
+
+    for (let i = 0; i < this.data.length; i++) {
+      if (!this.data[i] || this.data[i].length === 0) {
+        emptyBuckets++;
+      } else {
+        totalElements += this.data[i].length;
+        if (this.data[i].length > 1) {
+          collisions++;
+        }
+      }
+    }
+
+    return {
+      totalElements,
+      collisions,
+      emptyBuckets,
+      loadFactor: this.loadFactor(),
+      tableSize: this.data.length
+    };
+  }
 }
 
 
 
 
-const myHashTable = new HashTable(10);
-debugger
+// === DEMO DE HASH TABLE ===
+const myHashTable = new HashTable(5); // Tamaño pequeño para forzar colisiones
+
+console.log("=== INSERTANDO ELEMENTOS ===");
+
+// Insertar elementos
 myHashTable.set("daniel", 2004);
+console.log(`Hash de "daniel": ${myHashTable.hashMethod("daniel")}`);
+
 myHashTable.set("samuel", 2000);
+console.log(`Hash de "samuel": ${myHashTable.hashMethod("samuel")}`);
+
 myHashTable.set("claudia", 1979);
+console.log(`Hash de "claudia": ${myHashTable.hashMethod("claudia")}`);
+
 myHashTable.set("daniela", 2008);
+console.log(`Hash de "daniela": ${myHashTable.hashMethod("daniela")}`);
 
-console.log(myHashTable.data);
-myHashTable.delete("daniel");
+console.log("\n=== ESTADO DE LA TABLA ===");
+console.log("Contenido completo:", myHashTable.data);
 
-console.log(myHashTable.data);
+// Mostrar colisiones
+console.log("\n=== VERIFICANDO COLISIONES ===");
+myHashTable.data.forEach((bucket, index) => {
+  if (bucket && bucket.length > 1) {
+    console.log(`¡Colisión en índice ${index}!:`, bucket);
+  }
+});
+
+console.log("\n=== BUSCANDO ELEMENTOS ===");
+console.log(`Valor de "daniel": ${myHashTable.get("daniel")}`);
+console.log(`Valor de "daniela": ${myHashTable.get("daniela")}`);
+console.log(`Valor de "samuel": ${myHashTable.get("samuel")}`);
+
+console.log("\n=== ELIMINANDO ELEMENTO ===");
+const deleted = myHashTable.delete("daniel");
+console.log(`Elemento eliminado:`, deleted);
+
+console.log("\n=== ESTADO FINAL ===");
+console.log("Tabla después de eliminar:", myHashTable.data);
+console.log(`Buscando "daniel" después de eliminar: ${myHashTable.get("daniel")}`);
+console.log(`"daniela" sigue ahí: ${myHashTable.get("daniela")}`);
+
+console.log("\n=== MÉTODOS ADICIONALES ===");
+console.log("Todas las claves:", myHashTable.keys());
+console.log("Todos los valores:", myHashTable.values());
+
+console.log("\n=== ESTADÍSTICAS DE LA TABLA ===");
+const stats = myHashTable.getStats();
+console.log("Estadísticas:", stats);
+
+console.log("\n=== COMPARACIÓN DE COMPLEJIDAD ===");
+console.log("Hash Table vs Array:");
+console.log("- Búsqueda: O(1) promedio vs O(n)");
+console.log("- Inserción: O(1) promedio vs O(1) al final, O(n) al inicio");
+console.log("- Eliminación: O(1) promedio vs O(n)");
+
+console.log("\n=== CASOS DE USO COMUNES ===");
+console.log("- Cachés y memoización");
+console.log("- Índices de bases de datos");
+console.log("- Contadores y frecuencias");
+console.log("- Diccionarios y mapas");
